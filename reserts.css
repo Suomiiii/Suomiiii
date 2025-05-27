@@ -1,0 +1,358 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f7;
+    transition: all 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
+
+h1, h2, h3, h4 {
+    color: #278dec;
+    margin-bottom: 1rem;
+}
+
+.dark-mode h1, 
+.dark-mode h2, 
+.dark-mode h3, 
+.dark-mode h4 {
+    color: #0563af;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Layout */
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Header Styles */
+header {
+    background-color: #000000;
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: all 0.3s ease;
+}
+
+.dark-mode header {
+    background-color: #000000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #a3e4b9;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1552346154-21d32810aba3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 2rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin-bottom: 2rem;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background: #278dec;
+    color: white;
+    padding: 0.8rem 1.8rem;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #0044ff;
+    transform: translateY(-3px);
+}
+
+.dark-mode .btn {
+    background: #278dec;
+}
+
+.dark-mode .btn:hover {
+    background: #0044ff;
+}
+
+/* Stats Section */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 3rem 0;
+    background-color: #e8f4ea;
+    text-align: center;
+}
+
+.dark-mode .stats {
+    background-color: #2a2a2a;
+}
+
+.stat-item {
+    flex: 1;
+    padding: 0 1rem;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #278dec;
+    margin-bottom: 0.5rem;
+}
+
+.dark-mode .stat-number {
+    color: #0044ff;
+}
+
+/* Why Section */
+.why {
+    padding: 4rem 0;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.why-card {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.dark-mode .why-card {
+    background: #2a2a2a;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.why-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Materials & Tutorials Grid */
+.materials, .tutorials {
+    padding: 4rem 0;
+}
+
+.materials-grid, .tutorials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.dark-mode .card {
+    background: #2a2a2a;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.card-img {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+/* Newsletter */
+.newsletter {
+    padding: 4rem 0;
+    background-color: #e8f4ea;
+    text-align: center;
+}
+
+.dark-mode .newsletter {
+    background-color: #2a2a2a;
+}
+
+.newsletter form {
+    display: flex;
+    max-width: 500px;
+    margin: 2rem auto 0;
+}
+
+.newsletter input {
+    flex: 1;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 50px 0 0 50px;
+    font-size: 1rem;
+}
+
+.dark-mode .newsletter input {
+    background-color: #333;
+    color: #fff;
+    border-color: #444;
+}
+
+.newsletter button {
+    border-radius: 0 50px 50px 0;
+}
+
+/* Footer */
+footer {
+    background-color: #2a5c45;
+    color: white;
+    padding: 3rem 0 1rem;
+}
+
+.dark-mode footer {
+    background-color: #1e3b2a;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-col h4 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-col ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+    }
+    
+    nav ul {
+        margin-top: 1rem;
+    }
+    
+    .stats {
+        flex-direction: column;
+    }
+    
+    .stat-item {
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .newsletter form {
+        flex-direction: column;
+    }
+    
+    .newsletter input {
+        border-radius: 50px;
+        margin-bottom: 1rem;
+    }
+    
+    .newsletter button {
+        border-radius: 50px;
+        width: 100%;
+    }
+}
